@@ -1,0 +1,8 @@
+# add new admin to eks cluster
+
+eksctl create iamidentitymapping \   
+--cluster cluster-name \    
+--region=eu-central-1 \    
+--arn "arn:aws:iam::XXXXXXXXX:user/user.name@domain.com" \    
+--group "system:masters" \    
+--no-duplicate-arns
